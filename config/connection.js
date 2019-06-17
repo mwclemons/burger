@@ -8,20 +8,14 @@ var mysql = require("mysql");
 //   database: "burgers_db"
 // });
 
-var connection;
-if (process.env.JAWSDB_URL) {
-    // Database is JawsDB on Heroku
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-    // Database is local
-    connection = mysql.createConnection({
-        port: 3306,
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'r6wwld1m4y6jx070'
-    })
-};
+
+
+var connection = mysql.createConnection({
+  host: "u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  user: "fsqcmf435ga1u4z6",
+  password: "vfxfwvwdn13zlne7",
+  database: "r6wwld1m4y6jx070"
+});
 
 
 connection.connect(function(err) {
