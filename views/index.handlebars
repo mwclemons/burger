@@ -1,26 +1,19 @@
+<div class="jumbotron text-center">
+  <h1 class="display-4">Eat the Burgers!!!</h1>
+  <img src="/assets/img/burger.jpg" class="img-fluid rounded">
+
+</div>
+
 <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8 text-center">
-        <img src="/public/assets/img/burger.jpg">
-    </div>
-</div>
-
-<div class="row text-center">
-    <div class="col-12">
-        <h1>Eat the Burgers!!!</h1>
-    </div>
-</div>
-
-<div class="row text-center">
-    <div class="col-2"></div>
-    <div class="col-4">
-        <h2>Burgers ready to be eaten!!</h2>
+    <div class="col-3"></div>
+    <div class="col-3">
+        <h2 class="text-center">Ready Burgers!!</h2>
 
         <ul>
         {{#each burgers}}
             {{#unless devoured}}
             {{burger_name}}
-                <button class="devour" data-id="{{id}}" data-devour="{{devoured}}">
+                <button type="button" class="btn btn-danger devour" data-id="{{id}}" data-devour="{{devoured}}">
                 DEVOUR IT!!
                 </button>
             <br>
@@ -28,10 +21,10 @@
         {{/each}}
         </ul>
     </div>
-    <div class="col-4">
-        <h2>Devoured Burgers</h2>
+    <div class="col-3">
+        <h2 class="text-center">Devoured Burgers</h2>
 
-        <ul>
+        <ul class="text-right">
         {{#each burgers}}
             {{#if devoured}}
             {{burger_name}}
@@ -52,7 +45,7 @@
             <input type="text" id="bu" name="name">
         </div>
 
-        <button type="submit">Add Burger</button>
+        <button type="submit" class="btn btn-success">Add Burger</button>
         </form>
     </div>
 </div>
